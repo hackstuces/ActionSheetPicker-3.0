@@ -65,6 +65,10 @@ static const enum UIViewAnimationOptions options = UIViewAnimationOptionCurveEas
     self.presented = NO;
 }
 
+-(NSUInteger)supportedInterfaceOrientations{
+    return UIInterfaceOrientationMaskPortrait;
+}
+
 - (void)destroyWindow
 {
     if (SWActionSheetWindow)
@@ -215,7 +219,7 @@ static const enum UIViewAnimationOptions options = UIViewAnimationOptionCurveEas
 // ---
 - (BOOL)shouldAutorotate
 {
-    return YES;
+    return NO;
 }
 
 @end
